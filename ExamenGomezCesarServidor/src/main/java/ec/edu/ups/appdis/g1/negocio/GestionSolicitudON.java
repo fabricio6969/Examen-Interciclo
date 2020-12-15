@@ -11,7 +11,7 @@ import ec.edu.ups.appdis.g1.modelo.Persona;
 import ec.edu.ups.appdis.g1.modelo.Solicitud;
 
 @Stateless
-public class GestionSolicitudON {
+public class GestionSolicitudON implements GestionSolicitudONRemoto  {
 	@Inject
 	private SolicitudDAO daoSolicitud;
 	@Inject
@@ -31,4 +31,8 @@ public class GestionSolicitudON {
 			return true;	
 		}
 	
+	public boolean calcularPrecio(Solicitud solicitud) throws SQLException {
+		return false;
+	
+	}
 }
